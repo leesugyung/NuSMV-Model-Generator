@@ -35,7 +35,7 @@ public class ModelGenerator {
 
     //setting이 완료된 객체들을 사용해 NuSMV 코드를 생성한다.
     public void generatorModel() throws IOException{
-        PrintWriter pw = new PrintWriter("./src/output.smv");
+        PrintWriter pw = new PrintWriter("output.smv");
 
         AssignBlock assignBlock = module.getAssignBlock();
         InitBlock initBlock = module.getInitBlock();
