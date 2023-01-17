@@ -1,0 +1,16 @@
+MODULE main
+VAR
+	state: {2, 6, 4};
+	rt_state.c: 0..2;
+	check:  {A, B, C};
+	rt_state.match:  {ABC_match, AB_match, AC_match, BC_match, No_match};
+	afdd:  {dfff, fffff, ffffffff};
+ASSIGN
+	init(state):= 2;
+	init(rt_state.c):= 0;
+
+	next(state):= case
+		state = 2 & ((1=rt_state.c)|(!(1=rt_state.c)&(check=A)&(rt_state.match=AB_match))) : 6;
+		state = 2 & (afdd=fffff) : 4;
+		TRUE : state;
+	esac;
