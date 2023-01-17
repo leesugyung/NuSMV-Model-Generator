@@ -1,18 +1,13 @@
-## Getting Started
+## NuSMV Model Generator
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+[[src state, 'condition: event', dst state], ...]] 의 model txt 파일을 읽어
+NuSMV model로 변환해주는 자동화 도구입니다.
 
-## Folder Structure
+## Menual
 
-The workspace contains two folders by default, where:
+![image](https://user-images.githubusercontent.com/74905621/212845845-0bc39a2a-3262-4f60-bcac-5f441be922c2.png)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Command Option
+- `-filePath`: 입력할 model의 파일 경로를 전달한다. <반드시 전달해야 한다.>
+- `enumFilePath`: 열거형 변수에 대한 정보가 필요하면, 파일 경로를 전달한다. (default = “”)
+- `moduleName`: module의 이름을 전달한다. (default = “main”)
